@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Hospital</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="breadcrumbs">Home</div>
+
+
+        <div class="hero">
+            <img src="https://i.pinimg.com/1200x/c3/c8/92/c3c892ee92c3d6407e13583ea9ac0674.jpg" alt="hospital">
+            <div class="hero-inner">
+                <h1 class="title">Rumah Sakit Lokal</h1>
+                <p class="desc">Fasilitas kesehatan terakreditasi.</p>
+                <div class="chips">
+                    <span class="chip">Rumah Sakit: Lokal</span>
+                    <span class="chip">Lokasi: Jabodetabek</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-body">
+
+
+                <main class="flex">
+                    <section>
+                        <article class="doctor">
+                            <img class="avatar"
+                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                                alt="Doctor Strange" />
+                            <div class="info">
+                                <h3>Dr. Strange</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
+                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 300.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section>
+                        <article class="doctor">
+                            <img class="avatar"
+                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                                alt="Doctor Strange" />
+                            <div class="info">
+                                <h3>Dr. Strange</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
+                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 300.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section>
+                        <article class="doctor">
+                            <img class="avatar"
+                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                                alt="Doctor Strange" />
+                            <div class="info">
+                                <h3>Dr. Strange</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
+                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 300.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section>
+                        <article class="doctor">
+                            <img class="avatar"
+                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                                alt="Doctor Strange" />
+                            <div class="info">
+                                <h3>Dr. Strange</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
+                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 300.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- POP-UP 1 -->
+
+
+    <!-- hidden checkbox sebagai toggle -->
+    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+
+    <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+    <label for="modal-toggle" class="modal-overlay" aria-hidden="true"></label>
+
+    <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+        <div class="modal-inner">
+            <!-- close button (juga label supaya tanpa JS) -->
+            <label for="modal-toggle" class="modal-close" aria-label="Tutup">&times;</label>
+
+            <div class="modal-grid">
+                <img class="modal-avatar"
+                    src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                    alt="Dr Strange" />
+                <div class="modal-body">
+                    <h2 id="modal-title">Dr. Strange</h2>
+                    <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                    <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran pernapasan,
+                        TB, bronkitis kronis, dll.</p>
+
+                    <h4>Jadwal</h4>
+                    <ul>
+                        <li>Senin: 09:00 - 12:00</li>
+                        <li>Rabu: 10:00 - 14:00</li>
+                    </ul>
+
+                    <div style="margin-top:12px;">
+                        <!-- <button class="btn btn-primary">Booking</button> -->
+                        <!-- tombol tutup juga label -->
+                        <label for="modal-toggle" class="btn" style="margin-left:8px;">Tutup</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
