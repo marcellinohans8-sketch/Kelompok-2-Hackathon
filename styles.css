@@ -125,7 +125,7 @@ body {
     width: 76px;
     height: 76px;
     border-radius: 8px;
-    object-fit: cover
+    object-fit: cover;
 }
 
 info {
@@ -205,6 +205,18 @@ info {
     display: none;
 }
 
+/* ketika toggle checked -> tampilkan overlay + modal */
+.modal-toggle:checked + .modal-overlay {
+    display: block;
+}
+
+.modal-toggle:checked + .modal-overlay + .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+
 /* overlay: default tersembunyi */
 .modal-overlay {
     display: none;
@@ -235,16 +247,6 @@ info {
     overflow: auto;
 }
 
-/* ketika toggle checked -> tampilkan overlay + modal */
-.modal-toggle:checked~.modal-overlay {
-    display: block;
-}
-
-.modal-toggle:checked~.modal {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto;
-}
 
 /* modal internal layout */
 .modal-inner {

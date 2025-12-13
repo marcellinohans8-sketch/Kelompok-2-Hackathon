@@ -13,7 +13,7 @@
     <div class="wrap">
         <div class="breadcrumbs">Home</div>
 
-
+        <!-- HERO -->
         <div class="hero">
             <img src="https://i.pinimg.com/1200x/c3/c8/92/c3c892ee92c3d6407e13583ea9ac0674.jpg" alt="hospital">
             <div class="hero-inner">
@@ -27,12 +27,15 @@
         </div>
 
 
-
+        <!-- Outer Card -->
         <div class="card">
             <div class="card-body">
 
-
+                <!-- Main Content -->
                 <main class="flex">
+
+                    <!-- Doctors List -->
+                    <!-- Dr Strange -->
                     <section>
                         <article class="doctor">
                             <img class="avatar"
@@ -43,8 +46,8 @@
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
-                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                    <label for="modal-strange" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -53,18 +56,19 @@
                         </article>
                     </section>
 
+                    <!-- Dr Bruce -->
                     <section>
                         <article class="doctor">
                             <img class="avatar"
-                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
-                                alt="Doctor Strange" />
+                                src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be-lq"
+                                alt="Doctor Bruce_banner" />
                             <div class="info">
-                                <h3>Dr. Strange</h3>
+                                <h3>Dr. Bruce</h3>
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
-                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                    <label for="modal-bruce" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -73,18 +77,19 @@
                         </article>
                     </section>
 
+                    <!-- Dr Doom -->
                     <section>
                         <article class="doctor">
                             <img class="avatar"
-                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
-                                alt="Doctor Strange" />
+                                src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
+                                alt="Doctor Doom" />
                             <div class="info">
-                                <h3>Dr. Strange</h3>
+                                <h3>Dr. Doom</h3>
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
-                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                    <label for="modal-doom" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -93,18 +98,19 @@
                         </article>
                     </section>
 
+                    <!-- Dr Greget -->
                     <section>
                         <article class="doctor">
                             <img class="avatar"
-                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
-                                alt="Doctor Strange" />
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
+                                alt="Doctor Greget" />
                             <div class="info">
-                                <h3>Dr. Strange</h3>
+                                <h3>Dr. Greget</h3>
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-toggle" class="btn">Lihat Profil</label>
-                                    <!-- <button class="btn btn-primary">Booking</button> -->
+                                    <label for="modal-greget" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -123,46 +129,179 @@
 
 
 
-    <!-- POP-UP 1 -->
+    <!-- POP-UP -->
 
+    <!-- Dr. Strange -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-strange" class="modal-toggle" />
 
-    <!-- hidden checkbox sebagai toggle -->
-    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-strange" class="modal-overlay" aria-hidden="true"></label>
 
-    <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
-    <label for="modal-toggle" class="modal-overlay" aria-hidden="true"></label>
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-strange" class="modal-close" aria-label="Tutup">&times;</label>
 
-    <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
-        <div class="modal-inner">
-            <!-- close button (juga label supaya tanpa JS) -->
-            <label for="modal-toggle" class="modal-close" aria-label="Tutup">&times;</label>
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
+                        alt="Dr Strange" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Strange</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
 
-            <div class="modal-grid">
-                <img class="modal-avatar"
-                    src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
-                    alt="Dr Strange" />
-                <div class="modal-body">
-                    <h2 id="modal-title">Dr. Strange</h2>
-                    <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
-                    <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran pernapasan,
-                        TB, bronkitis kronis, dll.</p>
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
 
-                    <h4>Jadwal</h4>
-                    <ul>
-                        <li>Senin: 09:00 - 12:00</li>
-                        <li>Rabu: 10:00 - 14:00</li>
-                    </ul>
-
-                    <div style="margin-top:12px;">
-                        <!-- <button class="btn btn-primary">Booking</button> -->
-                        <!-- tombol tutup juga label -->
-                        <label for="modal-toggle" class="btn" style="margin-left:8px;">Tutup</label>
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-strange" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Dr. Bruce Banner -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-bruce" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-bruce" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-bruce" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be-lq"
+                        alt="Dr Bruce_banner" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Strange</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-bruce" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Dr. Doom -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-doom" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-doom" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-doom" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
+                        alt="Dr Doom" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Strange</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-doom" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Greget -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-greget" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-greget" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-greget" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
+                        alt="Dr Greget" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Strange</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-greget" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
