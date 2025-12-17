@@ -7,13 +7,14 @@ body {
     margin: 0;
     background: #cff0ff;
     color: #0f172a;
+    padding-bottom: 15rem;
 }
 
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
-  color: white;
+  background-color: #FFF57E;
+  color: #000000;
   border-radius: 12px;
 }
 
@@ -54,7 +55,7 @@ body {
     padding: 16px;
 }
 
-/* ===== TEAM SECTION ===== */
+/* team section */
 .team-section {
     margin-top: 40px;
 }
