@@ -2,10 +2,6 @@
     box-sizing: border-box
 }
 
-body {
-    padding-bottom: 40rem;
-}
-
 #title {
     background-color:#26CCC2;;
 }
@@ -17,14 +13,7 @@ body {
     padding-top: 1rem;
     height: 800px;
     flex-flow: column;
-}
-
-#contact-us {
-    background-color: #6AECE1;
-    border-radius: 2em;
-    padding: 1rem;
-    margin: 2rem;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.33);
+    margin-bottom: 10rem;
 }
 
 .map {
@@ -43,6 +32,15 @@ body {
     width: 80rem;
     flex-shrink: 1;
 }
+
+#contact-us {
+    background-color: #6AECE1;
+    border-radius: 2em;
+    padding: 1rem;
+    margin: 3rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.33);
+}
+
 .bigbox {
     display: flex;
     flex-wrap: wrap;
