@@ -26,6 +26,17 @@
             </div>
         </div>
 
+        <!-- Filter Drowpdown -->
+        <div class="filter-bar">
+            <label for="specialistFilter">Pilih Spesialis:</label>
+            <select id="specialistFilter">
+                <option value="all">Semua</option>
+                <option value="paru">Spesialis Paru</option>
+                <option value="jantung">Spesialis Jantung</option>
+                <option value="saraf">Spesialis Saraf</option>
+            </select>
+        </div>
+
 
         <!-- Outer Card -->
         <div class="card">
@@ -34,10 +45,13 @@
                 <!-- Main Content -->
                 <main class="flex">
 
+
+
                     <!-- Doctors List -->
-                    <!-- Dr Strange -->
+
+                    <!-- Dr Strange (Paru) -->
                     <section>
-                        <article class="doctor">
+                        <article class="doctor" data-spesialis="paru">
                             <img class="avatar"
                                 src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
                                 alt="Doctor Strange" />
@@ -47,7 +61,8 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-strange" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary" data-doctor="Dr. Strange"
+                                        data-spesialis="Paru">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -56,19 +71,20 @@
                         </article>
                     </section>
 
-                    <!-- Dr Bruce -->
+                    <!-- Dr Bruce (Jantung) -->
                     <section>
-                        <article class="doctor">
+                        <article class="doctor" data-spesialis="jantung">
                             <img class="avatar"
                                 src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be-lq"
                                 alt="Doctor Bruce_banner" />
                             <div class="info">
                                 <h3>Dr. Bruce</h3>
-                                <p>Spesialis Paru</p>
+                                <p>Spesialis Jantung</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-bruce" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary" data-doctor="Dr. Bruce"
+                                        data-spesialis="Jantung">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -77,19 +93,20 @@
                         </article>
                     </section>
 
-                    <!-- Dr Doom -->
+                    <!-- Dr Doom (Saraf) -->
                     <section>
-                        <article class="doctor">
+                        <article class="doctor" data-spesialis="saraf">
                             <img class="avatar"
                                 src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
                                 alt="Doctor Doom" />
                             <div class="info">
                                 <h3>Dr. Doom</h3>
-                                <p>Spesialis Paru</p>
+                                <p>Spesialis Anak</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-doom" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary" data-doctor="Dr. Doom"
+                                        data-spesialis="Saraf">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -100,7 +117,7 @@
 
                     <!-- Dr Greget -->
                     <section>
-                        <article class="doctor">
+                        <article class="doctor" data-spesialis="paru">
                             <img class="avatar"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
                                 alt="Doctor Greget" />
@@ -110,7 +127,8 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-greget" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary" data-doctor="Dr. Greget"
+                                        data-spesialis="Paru">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -301,6 +319,49 @@
             </div>
         </div>
     </div>
+
+    <!--  Modal Booking (versi JS) -->
+    <div class="modal booking-modal" id="bookingModal">
+        <div class="modal-inner">
+            <button class="modal-close" id="closeBooking">&times;</button>
+
+            <h2>Booking Dokter</h2>
+
+            <form id="bookingForm">
+                <input type="hidden" id="bookingId">
+
+                <div>
+                    <label>Dokter</label>
+                    <input type="text" id="doctorName" readonly>
+                </div>
+
+                <div>
+                    <label>Nama Pasien</label>
+                    <input type="text" id="patientName" required>
+                </div>
+
+                <div>
+                    <label>Tanggal</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+
+                <div>
+                    <label>Jam</label>
+                    <input type="time" id="bookingTime" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan Booking</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="home.js"></script>
+    <script src="booking.js"></script>
+
+</body>
+
+</html>
 
 </body>
 

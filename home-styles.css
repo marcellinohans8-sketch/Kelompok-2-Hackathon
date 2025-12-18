@@ -87,11 +87,19 @@ body {
     font-size: 13px
 }
 
+.filter-bar {
+    margin: 16px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 12px;
     width: 100%;
     min-width: 0;
 }
@@ -128,7 +136,7 @@ body {
     object-fit: cover;
 }
 
-info {
+.info {
     flex: 1 1 auto;
     min-width: 0;
 }
@@ -168,13 +176,30 @@ info {
     border-radius: 8px;
     border: 1px solid #e5e7eb;
     background: white;
-    cursor: pointer
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary {
     background: var(--accent);
     color: white;
     border: none
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.35);
 }
 
 .meta {
@@ -206,11 +231,11 @@ info {
 }
 
 /* ketika toggle checked -> tampilkan overlay + modal */
-.modal-toggle:checked + .modal-overlay {
+.modal-toggle:checked+.modal-overlay {
     display: block;
 }
 
-.modal-toggle:checked + .modal-overlay + .modal {
+.modal-toggle:checked+.modal-overlay+.modal {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
