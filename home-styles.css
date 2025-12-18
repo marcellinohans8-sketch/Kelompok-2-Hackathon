@@ -355,3 +355,139 @@ body {
 .modal .btn {
     margin: 0;
 }
+
+
+
+
+
+
+
+/* ================== */
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+} */
+
+#maindiv {
+    /* height: 100vh; */
+    display: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.8rem;
+}
+
+.receipt-container {
+    display: none;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 1px 1px rgba(23, 79, 90, 0.5);
+    height: 32vh;
+    width: 20vw;
+    margin-top: 3rem;
+    padding-top: 10px;
+    border-radius: 2rem;
+    position: absolute;
+    left: 40%;
+    bottom: 18%;
+}
+
+
+.receipt-title {
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.receipt-list {
+    background-color: yellow;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.per-receipt {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1rem;
+    height: 4.5rem;
+    border-style: dotted;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    background-color: yellow;
+}
+
+.receipt-button {
+    width: 4rem;
+    height: 1.3rem;
+    background-color: #5D7385;
+    color: white;
+    border: none;
+    margin-top: 0.6rem;
+    border-radius: 0.5rem;
+    transition: opacity 500ms, transform 200ms;
+    position: absolute;
+}
+
+.receipt-button.change {
+    left: 25%;
+    bottom: 1rem;
+}
+
+.receipt-button.confirm {
+    right: 25%;
+    bottom: 1rem;
+}
+
+.receipt-button:hover {
+    opacity: 0.7;
+    transform: translateY(-1px);
+}
+
+#receipt-modal {
+    background-color: grey;
+    height: 20rem;
+    width: 25rem;
+    position: fixed;
+    top: 7vh;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.enter-input {
+    margin-top: 2rem;
+}
+
+.submit-button {
+    margin-top: 1rem;
+}
+
+@media(max-width:1024px) {
+    .receipt-container {
+        min-width: 18rem;
+    }
+
+    .receipt-title {
+        min-width: 15rem;
+    }
+
+    .receipt-title h2 {
+        font-size: 1rem;
+    }
+
+    .receipt-button {
+        font-size: 10px;
+    }
+}

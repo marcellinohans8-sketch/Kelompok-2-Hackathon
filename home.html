@@ -52,7 +52,7 @@
     </nav>
 
 
-    
+
     <!-- CONTENT -->
 
     <div class="wrap">
@@ -106,7 +106,7 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-strange" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary" data-doctor="Dr. Strange"
+                                    <button class="btn btn-primary booking-btn" data-doctor="Dr. Strange"
                                         data-spesialis="Paru">Booking</button>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-bruce" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary" data-doctor="Dr. Bruce"
+                                    <button class="btn btn-primary booking-btn" data-doctor="Dr. Bruce"
                                         data-spesialis="Jantung">Booking</button>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-doom" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary" data-doctor="Dr. Doom"
+                                    <button class="btn btn-primary booking-btn" data-doctor="Dr. Doom"
                                         data-spesialis="Saraf">Booking</button>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-greget" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary" data-doctor="Dr. Greget"
+                                    <button class="btn btn-primary booking-btn" data-doctor="Dr. Greget"
                                         data-spesialis="Paru">Booking</button>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@
     <!--  Modal Booking (versi JS) -->
     <div class="modal booking-modal" id="bookingModal">
         <div class="modal-inner">
-            <button class="modal-close" id="closeBooking">&times;</button>
+            <button class="modal-close booking-btn" id="closeBooking">&times;</button>
 
             <h2>Booking Dokter</h2>
 
@@ -409,28 +409,48 @@
 
                 <div>
                     <label>Nama Pasien</label>
-                    <input type="text" id="patientName" required>
+                    <input type="text" id="patientName" placeholder="Jukut" required>
                 </div>
 
                 <div>
-                    <label>Tanggal</label>
-                    <input type="date" id="bookingDate" required>
+                    <label>Nomor HP</label>
+                    <input type="text" id="phoneNumber" pattern="[0-9]" placeholder="08123456789" required>
                 </div>
 
-                <div>
+                <!-- <div>
                     <label>Jam</label>
                     <input type="time" id="bookingTime" required>
-                </div>
+                </div> -->
 
-                <button type="submit" class="btn btn-primary">Simpan Booking</button>
+                <button type="submit" class="btn btn-primary booking-btn">Simpan Booking</button>
             </form>
         </div>
     </div>
 
-
+    <div id="maindiv">
+        <div class="receipt-container">
+            <div class="close-button">&times;</div>
+            <div class="receipt-title">
+                <h2>Your Bookings:</h2>
+            </div>
+            <div class="per-receipt">
+                <p>Doctor: <span class="name">"empty"</span></p>
+                <p>Number: <span class="number">088808080808008</span></p>
+            </div>
+            <button type="button" class="receipt-button change">Change</button>
+            <button type="button" class="receipt-button confirm">Confirm</button>
+        </div>
+        <div id="receipt-modal">
+            <p class="enter-input">Name:</p>
+            <input type="text">
+            <p class="enter-input">Number:</p>
+            <input type="number">
+            <button class="submit-button">submit</button>
+        </div>
+    </div>
 
     <script src="home.js"></script>
-    <script src="booking.js"></script>
+    <script src="home-booking.js"></script>
 
 </body>
 
