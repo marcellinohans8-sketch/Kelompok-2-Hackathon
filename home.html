@@ -6,9 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Local Hospital</title>
     <link rel="stylesheet" href="home-styles.css" />
+    <link rel="stylesheet" href="edge-styles.css">
 </head>
 
 <body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Siloam_Hospitals.svg/1280px-Siloam_Hospitals.svg.png"
+                    width="100" height="50" class="logo">
+                <div class="title">
+                    <h1>RUMAH SAKIT UMUM</h1>
+                    <h2>SILOAM Papua</h2>
+                </div>
+            </div>
+
+            <div class="right info">
+                <p><i class="fa fa-phone"><img
+                            src="https://media.istockphoto.com/id/1168511996/id/vektor/desain-ilustrasi-vektor-ikon-logo-handphone.jpg?s=170667a&w=0&k=20&c=_mw38s5I31bDQF6nY136MOkKaQL6PocTcvCUXW-78HU="
+                            width="20" height="20"></i> 081370171520 / WA : 081264326498</p>
+                <p><i class="fa fa-location-dot"><img
+                            src="https://i.pinimg.com/736x/9b/56/f5/9b56f50e5f4a28da700b0c991d96b5c7.jpg" width="20"
+                            height="20"></i> Jl. A. R. Hakim No. 168 Papua</p>
+                <p><i class="fa fa-envelope"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrGCpohqBLW5nD72S2ff-P4Otu-PBeIV08xw&s"
+                            width="20" height="20"></i> SILOAM@gmail.com</p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#"><i class="fa fa-home"></i></a></li>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="location.html">LOCATION</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- CONTENT -->
 
     <div class="wrap">
         <div class="breadcrumbs">Home</div>
@@ -26,6 +71,28 @@
             </div>
         </div>
 
+        <!-- intro -->
+        <section class="intro">
+            <h2>Pelayanan Kesehatan Terpercaya di Sekitar Anda</h2>
+            <p>
+                Local Hospital menyediakan layanan konsultasi dengan dokter spesialis
+                berpengalaman. Cari dokter sesuai kebutuhan Anda dan lakukan booking
+                secara mudah dan cepat.
+            </p>
+        </section>
+
+
+        <!-- Filter Drowpdown -->
+        <div class="filter-bar">
+            <label for="specialistFilter">Pilih Spesialis:</label>
+            <select id="specialistFilter">
+                <option value="all">Semua</option>
+                <option value="paru">Spesialis Paru</option>
+                <option value="jantung">Spesialis Jantung</option>
+                <option value="saraf">Spesialis Saraf</option>
+            </select>
+        </div>
+
 
         <!-- Outer Card -->
         <div class="card">
@@ -34,62 +101,26 @@
                 <!-- Main Content -->
                 <main class="flex">
 
+
+
                     <!-- Doctors List -->
+
+
+                    <!-- Spesialis Paru -->
+
                     <!-- Dr Strange -->
                     <section>
-                        <article class="doctor">
-                            <img class="avatar"
-                                src="https://i.insider.com/6262ff239f65660019064d73?width=800&format=jpeg&auto=webp"
-                                alt="Doctor Strange" />
+                        <article class="doctor" data-spesialis="paru">
+                            <img class="avatar" src="https://i.insider.com/6262ff239f65660019064d73?width=800"
+                                alt="Dr Strange - Spesialis Paru" />
                             <div class="info">
                                 <h3>Dr. Strange</h3>
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
                                     <div class="badge">⭐ 4.8</div>
                                     <label for="modal-strange" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
-                                </div>
-                            </div>
-                            <div class="meta">
-                                <div class="price">Rp 300.000</div>
-                            </div>
-                        </article>
-                    </section>
-
-                    <!-- Dr Bruce -->
-                    <section>
-                        <article class="doctor">
-                            <img class="avatar"
-                                src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be-lq"
-                                alt="Doctor Bruce_banner" />
-                            <div class="info">
-                                <h3>Dr. Bruce</h3>
-                                <p>Spesialis Paru</p>
-                                <div class="actions">
-                                    <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-bruce" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
-                                </div>
-                            </div>
-                            <div class="meta">
-                                <div class="price">Rp 300.000</div>
-                            </div>
-                        </article>
-                    </section>
-
-                    <!-- Dr Doom -->
-                    <section>
-                        <article class="doctor">
-                            <img class="avatar"
-                                src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
-                                alt="Doctor Doom" />
-                            <div class="info">
-                                <h3>Dr. Doom</h3>
-                                <p>Spesialis Paru</p>
-                                <div class="actions">
-                                    <div class="badge">⭐ 4.8</div>
-                                    <label for="modal-doom" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Strange">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
@@ -100,21 +131,247 @@
 
                     <!-- Dr Greget -->
                     <section>
-                        <article class="doctor">
+                        <article class="doctor" data-spesialis="paru">
                             <img class="avatar"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
-                                alt="Doctor Greget" />
+                                alt="Dr Greget - Spesialis Paru" />
                             <div class="info">
                                 <h3>Dr. Greget</h3>
                                 <p>Spesialis Paru</p>
                                 <div class="actions">
-                                    <div class="badge">⭐ 4.8</div>
+                                    <div class="badge">⭐ 4.7</div>
                                     <label for="modal-greget" class="btn">Lihat Profil</label>
-                                    <button class="btn btn-primary">Booking</button>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Greget">Booking</button>
                                 </div>
                             </div>
                             <div class="meta">
-                                <div class="price">Rp 300.000</div>
+                                <div class="price">Rp 280.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Bruce Wayne -->
+                    <section>
+                        <article class="doctor" data-spesialis="paru">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/fb/41/da/fb41da9c92a27049573ff6f6ebcb41f8.jpg"
+                                alt="Dr Bruce Wayne - Spesialis Paru" />
+                            <div class="info">
+                                <h3>Dr. Bruce Wayne</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.6</div>
+                                    <label for="modal-bruce-wayne" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Bruce Wayne">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 290.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Peter Parker -->
+                    <section>
+                        <article class="doctor" data-spesialis="paru">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/09/20/ee/0920eee3e3405c58ac82f09cd7a5e9c7.jpg"
+                                alt="Dr Peter Parker - Spesialis Paru" />
+                            <div class="info">
+                                <h3>Dr. Peter Parker</h3>
+                                <p>Spesialis Paru</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.5</div>
+                                    <label for="modal-peter" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Peter Parker">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 270.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+
+                    <!-- Spesialis Jantung -->
+
+                    <!-- Dr Bruce Banner -->
+                    <section>
+                        <article class="doctor" data-spesialis="jantung">
+                            <img class="avatar"
+                                src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be"
+                                alt="Dr Bruce Banner - Spesialis Jantung" />
+                            <div class="info">
+                                <h3>Dr. Bruce Banner</h3>
+                                <p>Spesialis Jantung</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.9</div>
+                                    <label for="modal-bruce" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Bruce Banner">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 350.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Tony Stark -->
+                    <section>
+                        <article class="doctor" data-spesialis="jantung">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/aa/8c/cb/aa8ccbfc49fef2699aeb979bf4bb2d7f.jpg"
+                                alt="Dr Tony Stark - Spesialis Jantung" />
+                            <div class="info">
+                                <h3>Dr. Tony Stark</h3>
+                                <p>Spesialis Jantung</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-tony" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Tony Stark">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 400.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Clark Kent -->
+                    <section>
+                        <article class="doctor" data-spesialis="jantung">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/32/d1/e6/32d1e629b1161ce5fde6510d8855e408.jpg"
+                                alt="Dr Clark Kent - Spesialis Jantung" />
+                            <div class="info">
+                                <h3>Dr. Clark Kent</h3>
+                                <p>Spesialis Jantung</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.7</div>
+                                    <label for="modal-clark" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Clark Kent">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 320.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Diana Prince -->
+                    <section>
+                        <article class="doctor" data-spesialis="jantung">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/29/bd/52/29bd522f97d4a609af59d500085a0f5f.jpg"
+                                alt="Dr Diana Prince - Spesialis Jantung" />
+                            <div class="info">
+                                <h3>Dr. Diana Prince</h3>
+                                <p>Spesialis Jantung</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.9</div>
+                                    <label for="modal-diana" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Diana Prince">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 360.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+
+                    <!-- Spesialis Saraf -->
+
+                    <!-- Dr Doom -->
+                    <section>
+                        <article class="doctor" data-spesialis="saraf">
+                            <img class="avatar"
+                                src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
+                                alt="Dr Doom - Spesialis Saraf" />
+                            <div class="info">
+                                <h3>Dr. Doom</h3>
+                                <p>Spesialis Saraf</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.6</div>
+                                    <label for="modal-doom" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open" data-doctor="Dr. Doom">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 330.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Charles Xavier -->
+                    <section>
+                        <article class="doctor" data-spesialis="saraf">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/736x/f0/71/e1/f071e1f383802e00a95c81a51f270b25.jpg"
+                                alt="Dr Charles Xavier - Spesialis Saraf" />
+                            <div class="info">
+                                <h3>Dr. Charles Xavier</h3>
+                                <p>Spesialis Saraf</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 5.0</div>
+                                    <label for="modal-charles" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Charles Xavier">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 450.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Barry Allen -->
+                    <section>
+                        <article class="doctor" data-spesialis="saraf">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/bb/72/15/bb7215e117aaa701faa97f93d141fea7.jpg"
+                                alt="Dr Barry Allen - Spesialis Saraf" />
+                            <div class="info">
+                                <h3>Dr. Barry Allen</h3>
+                                <p>Spesialis Saraf</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.7</div>
+                                    <label for="modal-barry" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Barry Allen">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 310.000</div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Dr Thcalla -->
+                    <section>
+                        <article class="doctor" data-spesialis="saraf">
+                            <img class="avatar"
+                                src="https://i.pinimg.com/1200x/32/bd/6b/32bd6b78daba76a217703b2d4cb6c8c2.jpg"
+                                alt="Dr Tchalla - Spesialis Saraf" />
+                            <div class="info">
+                                <h3>Dr. Tchalla</h3>
+                                <p>Spesialis Saraf</p>
+                                <div class="actions">
+                                    <div class="badge">⭐ 4.8</div>
+                                    <label for="modal-tchalla" class="btn">Lihat Profil</label>
+                                    <button class="btn btn-primary booking-open"
+                                        data-doctor="Dr. Barbara Gordon">Booking</button>
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="price">Rp 340.000</div>
                             </div>
                         </article>
                     </section>
@@ -127,10 +384,38 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-content">
+                <p>Jl. A. R. Hakim No. 168 Papua</p>
+                <p>Kabupaten Jayapura</p>
+                <p>Jayapura, Papua</p>
+
+
+                <br>
+
+
+                <p><strong>Nomor Telepon:</strong> 085260914785</p>
+                <p><strong>Email:</strong> SILOAM@gmail.com</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_of_the_Ministry_of_Health_of_the_Republic_of_Indonesia.png"
+                    width="150" height="50" alt="Kemenkes">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Siloam_Hospitals.svg/1280px-Siloam_Hospitals.svg.png"
+                    width="150" height="50" alt="Siloam_Hospitals">
+                <div class="footer-bottom">
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- POP-UP -->
 
+    <!-- Spesialis Paru -->
     <!-- Dr. Strange -->
     <div class="modal-wrapper">
         <!-- hidden checkbox sebagai toggle -->
@@ -173,7 +458,135 @@
         </div>
     </div>
 
+    <!-- Dr. Greget -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-greget" class="modal-toggle" />
 
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-greget" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-greget" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
+                        alt="Dr Greget" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Greget</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-greget" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Bruce Wayne -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-bruce-wayne" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-bruce-wayne" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-bruce-wayne" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/fb/41/da/fb41da9c92a27049573ff6f6ebcb41f8.jpg"
+                        alt="Dr Bruce Wayne" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Bruce Wayne</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-bruce-wayne" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Dr. Peter Parker -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-peter" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-peter" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-peter" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/09/20/ee/0920eee3e3405c58ac82f09cd7a5e9c7.jpg"
+                        alt="Dr Peter Parker" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Bruce Wayne</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-peter" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Spesialis Jantung -->
     <!-- Dr. Bruce Banner -->
     <div class="modal-wrapper">
         <!-- hidden checkbox sebagai toggle -->
@@ -190,10 +603,10 @@
 
                 <div class="modal-grid">
                     <img class="modal-avatar"
-                        src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be-lq"
+                        src="https://qph.cf2.quoracdn.net/main-qimg-702340030981eda69e96ad83854766be"
                         alt="Dr Bruce_banner" />
                     <div class="modal-body">
-                        <h2 id="modal-title">Dr. Strange</h2>
+                        <h2 id="modal-title">Dr. Bruce</h2>
                         <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
                         <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
                             pernapasan,
@@ -216,8 +629,133 @@
         </div>
     </div>
 
+    <!-- Dr. Tony Stark -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-tony" class="modal-toggle" />
 
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-tony" class="modal-overlay" aria-hidden="true"></label>
 
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-tony" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/aa/8c/cb/aa8ccbfc49fef2699aeb979bf4bb2d7f.jpg"
+                        alt="Dr Tony Stark" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Bruce</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-tony" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Clark Kent -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-clark" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-clark" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-clark" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/32/d1/e6/32d1e629b1161ce5fde6510d8855e408.jpg"
+                        alt="Dr Clark Kent" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Bruce</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-clark" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Diana Prince -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-diana" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-diana" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-diana" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/29/bd/52/29bd522f97d4a609af59d500085a0f5f.jpg"
+                        alt="Dr Diana Prince" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Bruce</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-diana" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spesialis Saraf -->
     <!-- Dr. Doom -->
     <div class="modal-wrapper">
         <!-- hidden checkbox sebagai toggle -->
@@ -237,7 +775,7 @@
                         src="https://www.katakini.com/images/posts/1/2024/2024-07-29/d9045d4a9f74ed65792907eaa11fb1f5_1.jpg"
                         alt="Dr Doom" />
                     <div class="modal-body">
-                        <h2 id="modal-title">Dr. Strange</h2>
+                        <h2 id="modal-title">Dr. Doom</h2>
                         <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
                         <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
                             pernapasan,
@@ -260,26 +798,25 @@
         </div>
     </div>
 
-    <!-- Dr. Greget -->
+    <!-- Dr. Charles Xavier -->
     <div class="modal-wrapper">
         <!-- hidden checkbox sebagai toggle -->
-        <input type="checkbox" id="modal-greget" class="modal-toggle" />
+        <input type="checkbox" id="modal-charles" class="modal-toggle" />
 
         <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
-        <label for="modal-greget" class="modal-overlay" aria-hidden="true"></label>
+        <label for="modal-charles" class="modal-overlay" aria-hidden="true"></label>
 
         <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
             <div class="modal-inner">
                 <!-- close button (juga label supaya tanpa JS) -->
-                <label for="modal-greget" class="modal-close" aria-label="Tutup">&times;</label>
+                <label for="modal-charles" class="modal-close" aria-label="Tutup">&times;</label>
 
                 <div class="modal-grid">
                     <img class="modal-avatar"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCiMuYXIR6_Pzr1tcES4E14evTmetT2aBaO4wCioTwXnIJFLWEJFe2M_Xfye_UrCheB8zEvqbWLA81ipKhkodqxnO_OIuSEvEMl7j-ceW&s=10"
-                        alt="Dr Greget" />
+                        src="https://i.pinimg.com/736x/f0/71/e1/f071e1f383802e00a95c81a51f270b25.jpg" alt="Dr Doom" />
                     <div class="modal-body">
-                        <h2 id="modal-title">Dr. Strange</h2>
+                        <h2 id="modal-title">Dr. Charles Xavier</h2>
                         <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
                         <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
                             pernapasan,
@@ -294,13 +831,159 @@
                         <div style="margin-top:12px;">
                             <!-- <button class="btn btn-primary">Booking</button> -->
                             <!-- tombol tutup juga label -->
-                            <label for="modal-greget" class="btn" style="margin-left:8px;">Tutup</label>
+                            <label for="modal-charles" class="btn" style="margin-left:8px;">Tutup</label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Dr. Barry Allen -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-barry" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-barry" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-barry" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/bb/72/15/bb7215e117aaa701faa97f93d141fea7.jpg" alt="Dr Doom" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. Barry Allen</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-barry" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Tchalla -->
+    <div class="modal-wrapper">
+        <!-- hidden checkbox sebagai toggle -->
+        <input type="checkbox" id="modal-tchalla" class="modal-toggle" />
+
+        <!-- overlay (label) — klik overlay akan meng-uncheck checkbox = menutup modal -->
+        <label for="modal-tchalla" class="modal-overlay" aria-hidden="true"></label>
+
+        <!-- modal card (diletakkan sebagai sibling, bukan di dalam label) -->
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <div class="modal-inner">
+                <!-- close button (juga label supaya tanpa JS) -->
+                <label for="modal-tchalla" class="modal-close" aria-label="Tutup">&times;</label>
+
+                <div class="modal-grid">
+                    <img class="modal-avatar"
+                        src="https://i.pinimg.com/1200x/32/bd/6b/32bd6b78daba76a217703b2d4cb6c8c2.jpg" alt="Dr Doom" />
+                    <div class="modal-body">
+                        <h2 id="modal-title">Dr. T'challa</h2>
+                        <p class="muted">Spesialis Paru — Rumah Sakit Lokal</p>
+                        <p>Dokter ahli di bidang paru dengan pengalaman >10 tahun. Menangani penyakit saluran
+                            pernapasan,
+                            TB, bronkitis kronis, dll.</p>
+
+                        <h4>Jadwal</h4>
+                        <ul>
+                            <li>Senin: 09:00 - 12:00</li>
+                            <li>Rabu: 10:00 - 14:00</li>
+                        </ul>
+
+                        <div style="margin-top:12px;">
+                            <!-- <button class="btn btn-primary">Booking</button> -->
+                            <!-- tombol tutup juga label -->
+                            <label for="modal-tchalla" class="btn" style="margin-left:8px;">Tutup</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Modal Booking (versi JS) -->
+    <div class="modal booking-modal" id="bookingModal">
+        <div class="modal-inner">
+            <button class="modal-close booking-btn" id="closeBooking">&times;</button>
+
+            <h2>Booking Dokter</h2>
+
+            <form id="bookingForm">
+                <input type="hidden" id="bookingId">
+
+                <div>
+                    <label>Dokter</label>
+                    <input type="text" id="doctorName" readonly>
+                </div>
+
+                <div>
+                    <label>Nama Pasien</label>
+                    <input type="text" id="patientName" placeholder="Jukut Goreng Krispi" required>
+                </div>
+
+                <div>
+                    <label>Nomor HP</label>
+                    <input type="text" id="phoneNumber" pattern="[0-9]*" placeholder="08123456789" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan Booking</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal Receipt -->
+    <div id="maindiv">
+        <div class="receipt-container">
+            <div class="close-receipt">&times;</div>
+            <div class="receipt-title">
+                <h2>Your Bookings:</h2>
+            </div>
+            <div class="per-receipt">
+                <p>Doctor: <span class="name-doctor">"empty"</span></p>
+                <p>Name: <span class="name-patient">"empty"</span></p>
+                <p>Number: <span class="number">088808080808008</span></p>
+
+            </div>
+            <button type="button" class="receipt-button change">Change</button>
+            <button type="button" class="receipt-button confirm">Confirm</button>
+        </div>
+        <div id="receipt-modal">
+            <p class="enter-input">Name:</p>
+            <input type="text">
+            <p class="enter-input">Number:</p>
+            <input type="number" id="phoneNumber">
+            <button class="submit-button">submit</button>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="home-booking.js"></script>
+
+</body>
+
+</html>
 
 </body>
 
