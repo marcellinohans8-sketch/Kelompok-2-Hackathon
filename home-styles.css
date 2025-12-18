@@ -87,6 +87,26 @@ body {
     font-size: 13px
 }
 
+.intro {
+    margin: 28px auto 18px;
+    max-width: 720px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+
 .filter-bar {
     margin: 16px 0;
     display: flex;
@@ -95,13 +115,10 @@ body {
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: start;
 }
 
 .card {
@@ -119,15 +136,17 @@ body {
 }
 
 .doctor {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
     align-items: center;
     gap: 14px;
     padding: 14px;
     border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    margin-bottom: 10px
+    border-radius: 12px;
+    height: 130px;
+    min-height: 120px;
 }
+
 
 .avatar {
     width: 76px;
@@ -137,9 +156,11 @@ body {
 }
 
 .info {
-    flex: 1 1 auto;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .info h3 {
     margin: 0;
@@ -156,12 +177,13 @@ body {
 }
 
 .actions {
-    margin-top: 10px;
     display: flex;
     gap: 8px;
     align-items: center;
-    flex-wrap: wrap;
+    min-height: 36px; 
+    flex-wrap: nowrap;
 }
+
 
 .badge {
     background: #ecfdf5;
@@ -204,12 +226,11 @@ body {
 
 .meta {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 14px;
-    flex: 0 0 auto;
-    min-width: 0;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 100px;
 }
+
 
 .price {
     font-weight: 700;
@@ -359,6 +380,77 @@ body {
 
 
 
+/* Element Booking Form Modal dibuat di JS */
+/* ========================= */
+/* BOOKING MODAL REFINEMENT */
+/* ========================= */
+
+.booking-modal {
+  max-width: 480px;
+  border-radius: 14px;
+}
+
+.booking-modal h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* form layout */
+#bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* label */
+#bookingForm label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* input */
+#bookingForm input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#bookingForm input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+}
+
+/* readonly doctor input */
+#doctorName {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* submit button */
+#bookingForm button[type="submit"] {
+  margin-top: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* close button */
+.booking-modal .modal-close {
+  top: 12px;
+  right: 12px;
+}
 
 
 
@@ -371,40 +463,60 @@ body {
 } */
 
 #maindiv {
-    /* height: 100vh; */
-    display: relative;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    /* lebih gelap & clean */
+    backdrop-filter: blur(4px);
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    z-index: 10000;
 }
 
-.close-button {
+.close-receipt {
     position: absolute;
-    top: 0.4rem;
-    right: 0.8rem;
+    top: 9px;
+    right: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #64748b;
 }
+
+.close-receipt:hover {
+    color: #0f172a;
+}
+
 
 .receipt-container {
-    display: none;
-    background-color: aliceblue;
-    box-shadow: 1px 1px 1px 1px rgba(23, 79, 90, 0.5);
-    height: 32vh;
-    width: 20vw;
-    margin-top: 3rem;
-    padding-top: 10px;
-    border-radius: 2rem;
-    position: absolute;
-    left: 40%;
-    bottom: 18%;
+    position: relative;
+    width: 360px;
+    margin-top: 8px;
+    /* align-items: center; */
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 
 .receipt-title {
-    background-color: lightblue;
-    padding: 1rem;
-    border-radius: 2rem;
-    margin: 10px;
-    margin-bottom: 0;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    padding: 9px;
+    border-radius: 12px;
+    margin-bottom: 9px;
 }
+
+.receipt-title h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
 
 .receipt-list {
     background-color: yellow;
@@ -413,40 +525,50 @@ body {
 }
 
 .per-receipt {
-    padding: 1rem;
-    margin: 1rem;
-    border: 1rem;
-    height: 4.5rem;
-    border-style: dotted;
-    border-color: black;
-    border-width: 3px;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    background-color: yellow;
+    background: #ffffff;
+    padding: 14px;
+    border: 2px solid #e5e7eb;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.per-receipt p {
+    margin: 6px 0;
+    color: #334155;
+}
+
+.per-receipt span {
+    font-weight: 600;
+    color: #0f172a;
 }
 
 .receipt-button {
-    width: 4rem;
-    height: 1.3rem;
-    background-color: #5D7385;
-    color: white;
-    border: none;
-    margin-top: 0.6rem;
-    border-radius: 0.5rem;
-    transition: opacity 500ms, transform 200ms;
-    position: absolute;
+    position: static;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
 }
 
 .receipt-button.change {
-    left: 25%;
-    bottom: 1rem;
+    background: #e5e7eb;
+    color: #111827;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid #3b517e;
+    cursor: pointer;
 }
 
 .receipt-button.confirm {
-    right: 25%;
-    bottom: 1rem;
+    background: #16a34a;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+    border: 1px solid #3b517e;
+    cursor: pointer;
 }
 
 .receipt-button:hover {
@@ -472,22 +594,4 @@ body {
 
 .submit-button {
     margin-top: 1rem;
-}
-
-@media(max-width:1024px) {
-    .receipt-container {
-        min-width: 18rem;
-    }
-
-    .receipt-title {
-        min-width: 15rem;
-    }
-
-    .receipt-title h2 {
-        font-size: 1rem;
-    }
-
-    .receipt-button {
-        font-size: 10px;
-    }
 }
