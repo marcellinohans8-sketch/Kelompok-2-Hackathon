@@ -117,7 +117,6 @@ body {
 .flex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
     align-items: start;
 }
 
@@ -138,6 +137,7 @@ body {
 .doctor {
     display: grid;
     grid-template-columns: 76px 1fr auto;
+    margin: 0.7rem;
     align-items: center;
     gap: 14px;
     padding: 14px;

@@ -31,7 +31,8 @@ const patientNameInput = document.getElementById("patientName");
 const patientPhoneInput = document.getElementById("phoneNumber");
 
 const receiptModal = document.getElementById("maindiv");
-const receiptDoctor = document.querySelector(".receipt-container .name");
+const receiptDoctor = document.querySelector(".receipt-container .name-doctor");
+const receiptName = document.querySelector(".receipt-container .name-patient");
 const receiptNumber = document.querySelector(".receipt-container .number");
 
 // untuk submit booking
@@ -41,14 +42,11 @@ bookingForm.addEventListener("submit", function (event) {
     const doctorName = doctorInput.value;
     const patientName = patientNameInput.value;
     const patientPhone = patientPhoneInput.value;
-
-    if (patientName === "" || patientPhone === "") {
-        alert("Nama dan nomor HP wajib diisi");
-        return;
-    }
+    
 
     // isi receipt
     receiptDoctor.textContent = doctorName;
+    receiptName.textContent = patientName;
     receiptNumber.textContent = patientPhone;
 
     // tutup modal booking
